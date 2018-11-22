@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
             console.log('country data ', data);
         },
         error => {
-            console.log('error', error);
+            console.log('error', error); 
         }
     );
   }
