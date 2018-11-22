@@ -11,14 +11,17 @@ export class AppComponent implements OnInit {
   constructor(private _httpService: HttpService) {
   }
   ngOnInit(): void {
+    this.getcoutrydetails();
+  }
+  getcoutrydetails() {
     this._httpService.getAll<any>('https://restcountries.eu/rest/v2/all').subscribe(
-        data => {
-            console.log('country data ', data);
-        },
-        error => {
-            console.log('error', error); 
-        }
-    );
+      data => {
+          console.log('country data ', data);
+      },
+      error => {
+          console.log('error', error);
+      }
+  );
   }
 }
 
